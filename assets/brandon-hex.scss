@@ -1,0 +1,58 @@
+:root {
+  --off-white: #FAF9F6;
+  --white: #ffffff;
+  --grey-100: #fefefe;
+  --slate-90: #ebeeef;
+  --slate-100: #f9fafa;
+  --dark-blue: #3C4E80;
+  --dark-purple: #454384;
+  --default-bg: #f2f2f1;
+  --default-sb-bg: #FFFFFF;
+  --default-text: #404040;
+  --default-sb-text: #2c2857;
+  --default-hl: #516DB0;
+  --default-heading: #516DB0;
+  --default-bodyl: #2c2857;
+  --default-navl: #516DB0;
+  --default-sbl: #2c2857;
+  --default-foot-text: #706E6C;
+  --default-button-text: #FFFFFF;
+  --default-bht: #FFFFFF;
+  --default-bbg: #516DB0;
+  --default-bhbg: #2c2857;
+  --default-border: #B4C0DD;
+  // set your custom colors here
+  --siteBgColorCustom: var(--white);
+  --sidebarBgColorCustom: var(--default-sb-bg);
+  --textColorCustom: var(--default-text);
+  --sidebarTextColorCustom: var(--default-sb-text);
+  --headlineColorCustom: var(--default-hl);
+  --headingColorCustom: var(--default-heading);
+  --bodyLinkColorCustom: var(--default-bodyl);
+  --navLinkColorCustom: var(--default-navl);
+  --sidebarLinkColorCustom: var(--default-sbl);
+  --footerTextColorCustom: var(--default-foot-text);
+  --buttonTextColorCustom: var(--default-button-text);
+  --buttonHoverTextColorCustom: var(--default-bht);
+  --buttonBgColorCustom: var(--default-bbg);
+  --buttonHoverBgColorCustom: var(--default-bhbg);
+  --borderColorCustom: var(--default-border);
+  --preBgColorCustom: var(--default-bg);
+}
+
+// set your custom colors here
+$siteBgColorCustom: var(--siteBgColorCustom);
+$textColorCustom: var(--textColorCustom);
+$sidebarBgColorCustom: var(--sidebarBgColorCustom);
+$sidebarTextColorCustom: var(--sidebarTextColorCustom);
+$headlineColorCustom: var(--headlineColorCustom);
+$headingColorCustom: var(--headingColorCustom);
+$bodyLinkColorCustom: var(--bodyLinkColorCustom);
+$navLinkColorCustom: var(--navLinkColorCustom);
+$sidebarLinkColorCustom: var(--sidebarLinkColorCustom);
+$footerTextColorCustom: var(--footerTextColorCustom);
+$buttonTextColorCustom: var(--buttonTextColorCustom);
+$buttonHoverTextColorCustom: var(--buttonHoverTextColorCustom);
+$buttonBgColorCustom: var(--buttonBgColorCustom);
+$buttonHoverBgColorCustom: var(--buttonHoverBgColorCustom);
+$borderColorCustom: var(--borderColorCustom);

@@ -1,0 +1,67 @@
+{{ define "main" }}
+{{ $page := . }}
+<main class="page-main pa4-ns" role="main">
+  <!-- If you copy this code beware I don't know how to write html code 
+  so I basically did whatever I could to make it work. There is almost certainly 
+  a better way to structure this code. -->
+  <section class="page-content mw7 center">
+    <!--<div class="flex-l items-center" style="{{ if .Params.image_left }}flex-direction: row-reverse;{{ end }}"> -->
+    <!--<div class="flex items-center" style="{{ if .Params.image_left }}flex-direction: row-reverse;{{ end }}">
+    <div class="flex flex-wrap-m items-center justify-center-m"> works for large screens not mobile
+    
+    -->
+    <div class="flex flex-column">
+      <div class="flex flex-row-l flex-column items-center">
+        {{ if .Params.show_image }}
+        <!--<div class="tr w-50-l {{ if .Params.image_left }}ml4{{ else }}order-2 mr4{{ end }}">
+        {{ with .Params.images }}
+          {{ range first 1 . }}<img class="mv0 w-70-m" src="{{ . }}"/>{{ end }}
+        {{ end }}
+        {{ if .Params.image_left }}ml4{{ else }}order-2 mr4{{ end }}
+        {{ if .Params.image_left }}ml4{{ else }}order-2 mr4{{ end }}
+        -->
+        <div class="tr w-70 w-50-m w-40-l {{ if .Params.image_left }}ml4-l{{ else }}order-2 mr4-l{{ end }}">
+        {{ with .Params.images }}
+          {{ range first 1 . }}<img class="mv0 flex-grow justify-center" src="{{ . }}"/>{{ end }}
+        {{ end }}
+        </div>
+        {{ else if .Site.Params.logo }}
+        <div class="site-logo tr w-25 w-third-l center-m {{ if .Params.image_left }}ml4{{ else }}order-2 mr4{{ end }}">
+          {{ .Site.Params.logo | readFile | safeHTML }}
+        </div>
+        <!--<div class="tr w-50-l {{ if .Params.image_left }}ml4{{ else }}mr4{{ end }}">
+        {{ with .Params.images }}
+          {{ range first 1 . }}<img class="mv0 w-70-m" src="{{ . }}"/>{{ end }}
+        {{ end }}
+        </div>
+        f-subheadline-l
+        mv0 w-60-m mr6-m
+        -->
+        {{ end }}
+        <!--<div class="mh4 {{ if .Params.show_image }}w-60-l {{ else if .Site.Params.logo }}w-two-thirds-l {{ end }}{{ if not .Params.text_align_left }}tr{{ end }}">
+          {{ with .Params.title }}<h1 class="f2 f1-l fw5-ns mv4 lh-solid">{{ . }}</h1>{{ end }}
+          {{ with .Params.subtitle }}<h2 class="f5 fw7 mt0 mb4 ttu tracked">{{ . }}</h2>{{ end }}
+          {{ if .Params.show_social_links }}{{ partial "shared/social-links.html" . }}{{ end }}
+          {{ with .Params.description }}<p class="f4 mt4 lh-copy">{{ . | markdownify }}</p>{{ end }}
+          {{ if .Params.show_action_link }}<a class="mt4 action {{ .Params.action_type }}" href="{{ .Params.action_link | relURL }}">{{ .Params.action_label | safeHTML }}</a>{{ end }}
+        </div>-->
+        <div class="mh4 pa3 w-60 {{ if .Params.show_image }}w-60-l {{ else if .Site.Params.logo }}w-two-thirds-l {{ end }} tc tl-l {{ if not .Params.text_align_left }}tr{{ end }}">
+          {{ with .Params.title }}<h1 class="f2 f1-l fw5-ns mv3 mv4-l lh-solid">{{ . }}</h1>{{ end }}
+          {{ with .Params.subtitle }}<h2 class="f5 fw7 mt0 mb3 mb4-l ttu tracked">{{ . }}</h2>{{ end }}
+          {{ if .Params.show_social_links }}{{ partial "shared/social-links.html" . }}{{ end }}
+        </div>
+      </div>
+      <div class="mh4 w-90">
+        {{ with .Params.description }}<p class="f4 mt4 lh-copy">{{ . | markdownify }}</p>{{ end }}
+        {{ if .Params.show_action_link }}<a class="mt4 action {{ .Params.action_type }}" href="{{ .Params.action_link | relURL }}">{{ .Params.action_label | safeHTML }}</a>{{ end }}
+      </div>
+    </div>
+    {{ if .Params.show_featured }}
+    <div class="mh4">
+      {{ partial "shared/summary-li.html" . }}
+    </div>
+    {{ end }}
+  </section>
+</main>
+{{ end }}
+
